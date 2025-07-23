@@ -1,0 +1,27 @@
+# Core web framework
+flask
+flask-cors
+python-dotenv==1.0.0
+werkzeug==3.0.1
+
+# Document processing
+PyPDF2==3.0.1
+python-docx==1.1.0
+python-pptx==0.6.23
+
+# Data processing (Python 3.12 compatible)
+pandas==2.1.4
+numpy==1.26.2
+
+# Vector store and embeddings
+chromadb==0.4.22
+sentence-transformers==2.2.2
+
+# LLM integration
+google-generativeai
+
+# Utilities
+requests==2.31.0
+
+# Development and testing
+pytest==7.4.4
