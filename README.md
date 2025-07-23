@@ -2,35 +2,6 @@
 
 A sophisticated multi-agent Retrieval-Augmented Generation (RAG) system that processes multi-format documents and answers user queries using an agentic architecture with Model Context Protocol (MCP) for inter-agent communication.
 
-## 🧠 Sample Workflow (Message Passing with MCP)
-
-```
-User uploads: sales_review.pdf, metrics.csv
-User: "What KPIs were tracked in Q1?"
-➡️ UI forwards to CoordinatorAgent
-➡️ Coordinator triggers:
-   🔸 IngestionAgent → parses documents
-   🔸 RetrievalAgent → finds relevant chunks  
-   🔸 LLMResponseAgent → formats prompt & calls LLM
-➡️ Chatbot shows answer + source chunks
-```
-
-**MCP Message Example:**
-```json
-{
-  "type": "RETRIEVAL_RESULT",
-  "sender": "RetrievalAgent", 
-  "receiver": "LLMResponseAgent",
-  "trace_id": "rag-457",
-  "payload": {
-    "retrieved_context": [
-      "slide 3: revenue up 15% in Q1",
-      "doc: Q1 summary shows KPIs tracked..."
-    ],
-    "query": "What KPIs were tracked in Q1?"
-  }
-}
-```
 
 ## 🚀 Key Features
 
@@ -300,6 +271,38 @@ class MCPMessage:
 - `RESPONSE_GENERATED`: LLM response ready
 - `ERROR`: Error occurred
 - `HEALTH_CHECK`: Agent health status
+
+
+## 🧠 Sample Workflow (Message Passing with MCP)
+
+```
+User uploads: sales_review.pdf, metrics.csv
+User: "What KPIs were tracked in Q1?"
+➡️ UI forwards to CoordinatorAgent
+➡️ Coordinator triggers:
+   🔸 IngestionAgent → parses documents
+   🔸 RetrievalAgent → finds relevant chunks  
+   🔸 LLMResponseAgent → formats prompt & calls LLM
+➡️ Chatbot shows answer + source chunks
+```
+
+**MCP Message Example:**
+```json
+{
+  "type": "RETRIEVAL_RESULT",
+  "sender": "RetrievalAgent", 
+  "receiver": "LLMResponseAgent",
+  "trace_id": "rag-457",
+  "payload": {
+    "retrieved_context": [
+      "slide 3: revenue up 15% in Q1",
+      "doc: Q1 summary shows KPIs tracked..."
+    ],
+    "query": "What KPIs were tracked in Q1?"
+  }
+}
+```
+
 
 ### Error Handling
 - Automatic error propagation between agents
