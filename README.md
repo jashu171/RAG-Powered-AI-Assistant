@@ -60,10 +60,10 @@ graph TB
 ├─────────────────────────────────────────────────────────────────────────────┤
 │                          🎯 Coordinator Agent (MCP)                         │
 ├─────────────────┬─────────────────┬─────────────────┬─────────────────────────┤
-│  📄 Ingestion   │  🔍 Retrieval   │  🧠 LLM Agent   │   📊 Health Monitor     │
+│  📄 Ingestion   │  🔍 Retrieval    │  🧠 LLM Agent   │   📊 Health Monitor     │
 │     Agent       │     Agent       │                 │                         │
 ├─────────────────┼─────────────────┼─────────────────┼─────────────────────────┤
-│ 📋 Doc Parser   │ 🗄️ ChromaDB     │ 🤖 Gemini LLM   │   📈 Statistics         │
+│ 📋 Doc Parser   │ 🗄️ ChromaDB      │ 🤖 Gemini LLM   │   📈 Statistics         │
 │ • PDF, DOCX     │ • Vector Store  │ • gemini-2.0    │   • Performance         │  
 │ • PPTX, CSV     │ • Semantic      │   -flash        │   • Error Tracking      │
 │ • TXT, MD       │   Search        │ • Context Aware │   • Agent Status        │
@@ -71,7 +71,7 @@ graph TB
                               ⬇️
 ┌─────────────────────────────────────────────────────────────────────────────┐
 │              📡 Model Context Protocol (MCP) Communication Bus              │
-│    • Type-safe Messaging  • Trace IDs  • Error Propagation  • Priority     │
+│    • Type-safe Messaging  • Trace IDs  • Error Propagation  • Priority      │
 └─────────────────────────────────────────────────────────────────────────────┘
 ```
 
@@ -115,7 +115,7 @@ graph TB
 ## 🛠️ **Installation & Setup**
 
 ### **Prerequisites**
-- 🐍 Python 3.8+
+- 🐍 Python 3.10+
 - 🔑 Google Gemini API Key
 - 💾 At least 4GB RAM (recommended)
 - 💿 500MB disk space
@@ -203,7 +203,7 @@ Content-Type: application/json
 {
   "query": "What are the main KPIs discussed in the quarterly report?",
   "search_k": 5,
-  "file_filter": "quarterly_report.pdf"  // Optional
+  "file_filter": "quarterly_report.pdf" 
 }
 ```
 
@@ -403,11 +403,6 @@ tail -f app.log | grep "MCP"
 
 ## 📊 **System Monitoring & Observability**
 
-### **📝 Logging**
-- Structured logging with timestamps and trace IDs
-- Multiple log levels (DEBUG, INFO, WARNING, ERROR)
-- File and console output with rotation
-
 ### **📈 Metrics**
 - Document processing statistics
 - Query response times and accuracy
@@ -442,7 +437,7 @@ tail -f app.log | grep "MCP"
 
 ## 🤝 **Contributing**
 
-We welcome contributions! Please follow these steps:
+I welcome contributions! Please follow these steps:
 
 1. **🍴 Fork** the repository
 2. **🌿 Create** a feature branch (`git checkout -b feature/amazing-feature`)
@@ -456,24 +451,7 @@ We welcome contributions! Please follow these steps:
 - Update documentation as needed
 - Ensure all tests pass before submitting
 
----
 
-## 📞 **Support & Community**
-
-### **🆘 Getting Help**
-- 📖 Check the [documentation](#api-documentation)
-- 🔍 Review [troubleshooting](#troubleshooting) section
-- 📝 Check existing [GitHub Issues](https://github.com/yourusername/agentic-rag-mcp/issues)
-- 💬 Join our community discussions
-
-### **🐛 Reporting Issues**
-When reporting issues, please include:
-- System information (OS, Python version)
-- Error logs and stack traces
-- Steps to reproduce the issue
-- Expected vs actual behavior
-
----
 
 ## 🛠️ **Troubleshooting**
 
@@ -522,7 +500,7 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 
 <div align="center">
 
-### **🌟 Built with ❤️ using Python, Flask, ChromaDB, and Google Gemini**
+### **🌟 Built with ❤️ using Python, Flask, ChromaDB, and Google Gemini LLM **
 
 [![Made with Python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)
 [![Powered by Gemini](https://img.shields.io/badge/Powered%20by-Google%20Gemini-orange.svg)](https://ai.google.dev/)
@@ -533,3 +511,25 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 [🎬 **Watch Demo**](https://drive.google.com/file/d/1zAwkd-uqBUd2xuKAePTtoB6ZnWNMgr4M/view?usp=sharing) • [📚 **Documentation**](#api-documentation) • [🐛 **Report Bug**](https://github.com/yourusername/agentic-rag-mcp/issues) • [💡 **Request Feature**](https://github.com/yourusername/agentic-rag-mcp/issues)
 
 </div>
+---
+
+## 📞 **Support & Community**
+
+### **🆘 Getting Help**
+- Email :- jashwanthboddupally@gmail.com
+- Cell No :- 9010767269
+- linkedIn :- [LinkedIN](#https://www.linkedin.com/in/jashwanth-boddupally-64068b289/)
+- Portfolio :- [Portfilio](#https://jashu171.github.io/portfolio/)
+- 📖 Check the [documentation](#api-documentation)
+- 🔍 Review [troubleshooting](#troubleshooting) section
+- 📝 Check existing [GitHub Issues](https://github.com/jashu171/agentic-rag-mcp/issues)
+- 💬 Join our community discussions
+
+### **🐛 Reporting Issues**
+When reporting issues, please include:
+- System information (OS, Python version)
+- Error logs and stack traces
+- Steps to reproduce the issue
+- Expected vs actual behavior
+
+---
