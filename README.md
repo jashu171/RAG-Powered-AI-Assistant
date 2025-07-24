@@ -227,9 +227,9 @@ GET /health
   "system_health": {
     "overall_status": "healthy",
     "agent_health": {
-      "ingestion": {"status": "healthy", "stats": {...}},
-      "retrieval": {"status": "healthy", "stats": {...}},
-      "llm": {"status": "healthy", "stats": {...}}
+      "ingestion": {"status": "healthy"},
+      "retrieval": {"status": "healthy"},
+      "llm": {"status": "healthy"}
     }
   }
 }
